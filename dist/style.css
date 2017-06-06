@@ -657,3 +657,6 @@ h2 {
   @media (max-width: 1020px) {
     .inner-links {
       margin-left: 0; } }
+
+#myCanvas {
+  border: 1px solid; }
