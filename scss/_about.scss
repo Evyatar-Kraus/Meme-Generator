@@ -33,31 +33,6 @@ h2{
 
 .post-img-about {
   margin-bottom: em(100px);
-
-    position:relative;
-    margin:auto;
-    text-align:center;
-    overflow:hidden;
-    white-space:nowrap;
-    display:table;
-
-    -webkit-transform: skew(-30deg);
-    -ms-transform: skew(-30deg);
-    transform: skew(-30deg);
-    overflow: hidden;
-    display: inline-block;
-}
-.innerclip {
-    -webkit-transform: skew(50deg);
-    -ms-transform: skew(50deg);
-    transform: skew(50deg);
-    overflow: hidden;
-    display: inline-block;
-}
-.img-about {
-    -webkit-transform: skew(-35deg);
-    -ms-transform: skew(-35deg);
-    transform: skew(-35deg);
 }
 
 
