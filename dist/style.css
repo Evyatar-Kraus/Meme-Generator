@@ -511,18 +511,88 @@ fieldset {
   max-width: 61.25em; }
 
 .post-container {
-  margin: 5.625em; }
-
-.about {
-  height: 21.5625em;
-  background-color: #2eb398;
-  border-left: 1px solid gray;
-  border-right: 1px solid gray; }
-
-.touch {
-  height: 34.5em;
-  background-color: #323232; }
+  margin: 5.625em;
+  display: flex;
+  flex-flow: row wrap; }
 
 .main-footer {
   background-color: black;
   padding: 2.5em; }
+
+.about {
+  background-color: #2eb398; }
+
+.container-about {
+  margin: 0 auto;
+  padding: 0.0625em 0;
+  width: 100%;
+  max-width: 63.75em;
+  border-left: 1px solid gray;
+  border-right: 1px solid gray; }
+
+h1 {
+  color: #d7fcf5;
+  font-family: "Maven Pro Regular";
+  font-size: 1.875em;
+  font-weight: 400;
+  line-height: 0.3125em; }
+
+h2 {
+  width: 15.5625em;
+  height: 1.0625em;
+  color: #20816d;
+  font-family: "Maven Pro Regular";
+  font-size: 1.125em;
+  font-weight: 400;
+  line-height: 1.375em; }
+
+.post-img-about {
+  margin-bottom: 6.25em;
+  position: relative;
+  margin: auto;
+  text-align: center;
+  overflow: hidden;
+  white-space: nowrap;
+  display: table;
+  -webkit-transform: skew(-30deg);
+  -ms-transform: skew(-30deg);
+  transform: skew(-30deg);
+  overflow: hidden;
+  display: inline-block; }
+
+.innerclip {
+  -webkit-transform: skew(50deg);
+  -ms-transform: skew(50deg);
+  transform: skew(50deg);
+  overflow: hidden;
+  display: inline-block; }
+
+.img-about {
+  -webkit-transform: skew(-35deg);
+  -ms-transform: skew(-35deg);
+  transform: skew(-35deg); }
+
+.post-text {
+  line-height: 1.8;
+  letter-spacing: 0.6px;
+  position: relative;
+  flex: 0 1 calc(50% - 2em);
+  margin-right: 220px;
+  color: #d7fcf5;
+  font-family: Lato;
+  font-weight: 400;
+  line-height: 1.375em; }
+  @media (max-width: 1020px) {
+    .post-text {
+      flex: 1 1 100%; } }
+
+.post-container-about {
+  margin: 5.625em;
+  display: flex;
+  flex-flow: row wrap; }
+
+.inner-links {
+  margin-left: 750px; }
+  @media (max-width: 1020px) {
+    .inner-links {
+      margin-left: 0; } }
