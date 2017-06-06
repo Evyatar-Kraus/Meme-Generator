@@ -515,7 +515,9 @@ fieldset {
 
 .about {
   height: 21.5625em;
-  background-color: #2eb398; }
+  background-color: #2eb398;
+  border-left: 1px solid gray;
+  border-right: 1px solid gray; }
 
 .touch {
   height: 34.5em;

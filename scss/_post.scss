@@ -10,8 +10,19 @@
 .about {
   height: em(345px);
   background-color: #2eb398;
+  border-left: 1px solid gray;
+  border-right: 1px solid gray;
 }
 .touch{
     height: em(552px);
     background-color: #323232;
 }
+
+// .container {
+//   padding: em(81px) 0;
+//   position: relative;
+//   width: 100%;
+//   max-width: em(980px);
+//   border-left: 1px solid gray;
+//   border-right: 1px solid gray;
+// }
