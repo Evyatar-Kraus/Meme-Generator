@@ -422,16 +422,25 @@ template {
   src: url("../assets/fonts/ubunto/Ubuntu-Light.ttf");
   font-weight: 400; }
 
+/*----------  Lato Font  ----------*/
+@font-face {
+  font-family: 'Lato';
+  font-style: normal;
+  font-weight: 400;
+  src: local("Lato Regular"), local("Lato-Regular"), url(https://fonts.gstatic.com/s/lato/v13/1YwB1sO8YE1Lyjf12WNiUA.woff2) format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215; }
+
 :root {
   /* Layout */
   --container-width: 1020px;
   --inner-container-width: 900px;
   /* Fonts */
-  --primary-font: Playfair;
+  --primary-font: Lato;
   --secondary-font: Ubuntu;
   /* Colors */
   --main-color: #626262;
-  --sections-bg: #f0f0f0; }
+  --sections-bg: #f0f0f0;
+  --contact-bg-color: #323232; }
 
 /*----------  Containers  ----------*/
 .container {
@@ -519,9 +528,80 @@ fieldset {
   border-left: 1px solid gray;
   border-right: 1px solid gray; }
 
-.touch {
-  height: 34.5em;
-  background-color: #323232; }
+.contact-container {
+  width: 100%;
+  background-color: var(--contact-bg-color); }
+  .contact-container h3 {
+    color: #dcdcdc;
+    margin: 0; }
+  .contact-container .contact {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 3% 0;
+    margin-left: 20%;
+    margin-right: 20%; }
+    .contact-container .contact .contact-heading > p {
+      color: #bfbfbf; }
+    .contact-container .contact .contact-body {
+      display: flex;
+      flex-flow: row nowrap;
+      justify-content: space-between; }
+    .contact-container .contact .contact-form {
+      flex-basis: 65%;
+      margin-right: 1em; }
+      .contact-container .contact .contact-form input, .contact-container .contact .contact-form textarea {
+        padding: 12px;
+        color: #afafaf; }
+      .contact-container .contact .contact-form input {
+        font-family: var(--primary-font);
+        border: none;
+        background-color: #454545; }
+        .contact-container .contact .contact-form input::-moz-placeholder {
+          color: #afafaf; }
+        .contact-container .contact .contact-form input::-ms-placeholder {
+          color: #afafaf; }
+        .contact-container .contact .contact-form input::-webkit-input-placeholder {
+          color: #afafaf; }
+      .contact-container .contact .contact-form textarea {
+        font-family: var(--primary-font);
+        border: none;
+        background-color: #454545; }
+        .contact-container .contact .contact-form textarea::-moz-placeholder {
+          color: #afafaf; }
+        .contact-container .contact .contact-form textarea::-ms-placeholder {
+          color: #afafaf; }
+        .contact-container .contact .contact-form textarea::-webkit-input-placeholder {
+          color: #afafaf; }
+    .contact-container .contact .contact-details {
+      flex-basis: 35%;
+      display: flex;
+      flex-flow: column nowrap;
+      justify-content: flex-start;
+      margin-left: 1em;
+      font-family: var(--primary-font); }
+      .contact-container .contact .contact-details p {
+        line-height: 22px;
+        margin: 0;
+        min-height: 50%; }
+      .contact-container .contact .contact-details .emphasis {
+        color: #e1e1e1;
+        font-weight: bold; }
+  .contact-container ul img {
+    margin-right: 0.5em;
+    height: 13px;
+    width: 8px; }
+  .contact-container form input {
+    min-height: 2em; }
+  .contact-container form textarea {
+    min-height: 10em; }
+  .contact-container form input, .contact-container form textarea {
+    width: 100%;
+    display: block;
+    margin-bottom: 1em; }
+  .contact-container textarea {
+    resize: none; }
 
 .main-footer {
   background-color: black;

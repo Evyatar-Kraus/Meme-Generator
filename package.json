@@ -1,5 +1,5 @@
 {
-  "name": "codingacademy-scss-template",
+  "name": "meme-generator",
   "version": "1.0.0",
   "main": "index.js",
   "license": "MIT",
@@ -16,5 +16,20 @@
   },
   "dependencies": {
     "normalize.css": "^5.0.0"
-  }
+  },
+  "description": "meme generator for second sprint  ",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Lariska/second-sprint.git"
+  },
+  "keywords": [
+    "meme",
+    "generator",
+    "memes"
+  ],
+  "author": "evyatar kraus",
+  "bugs": {
+    "url": "https://github.com/Lariska/second-sprint/issues"
+  },
+  "homepage": "https://github.com/Lariska/second-sprint#readme"
 }
