@@ -7,6 +7,7 @@
  */
 /* Document
    ========================================================================== */
+@import url(../node_modules/bootstrap/dist/css/bootstrap.min.css);
 html {
   font-family: sans-serif;
   /* 1 */
@@ -630,20 +631,19 @@ h2 {
   font-weight: 400;
   line-height: 1.375em; }
 
-.post-img-about {
-  margin-bottom: 6.25em; }
+@media (max-width: 642px) {
+  .post-img-about {
+    width: 100%;
+    padding: 0.625em 0.625em; } }
 
 .post-text {
-  line-height: 1.8;
-  letter-spacing: 0.6px;
   position: relative;
   flex: 0 1 calc(50% - 2em);
   margin-right: 220px;
   color: #d7fcf5;
   font-family: Lato;
-  font-weight: 400;
-  line-height: 1.375em; }
-  @media (max-width: 1020px) {
+  font-weight: 400; }
+  @media (max-width: 642px) {
     .post-text {
       flex: 1 1 100%; } }
 
@@ -653,7 +653,7 @@ h2 {
   flex-flow: row wrap; }
 
 .inner-links {
-  margin-left: 750px; }
+  margin-left: 650px; }
   @media (max-width: 1020px) {
     .inner-links {
       margin-left: 0; } }
@@ -824,4 +824,35 @@ body {
     font-size: 13px; } }
 
 #myCanvas {
+  margin: 10px;
   border: 1px solid; }
+  @media (max-width: 642px) {
+    #myCanvas {
+      width: 85%;
+      padding: 0.625em 0.625em; } }
+
+@media (max-width: 642px) {
+  .post-img-canvas {
+    width: 85%;
+    padding: 0.625em 0.625em; } }
+
+.post-text-canvas {
+  margin: 100px;
+  position: relative;
+  flex: 0 1 calc(50% - 2em);
+  margin-right: 220px;
+  color: #d7fcf5;
+  font-family: Lato;
+  font-weight: 400; }
+  @media (max-width: 642px) {
+    .post-text-canvas {
+      flex: 1 1 100%; } }
+
+.inputText {
+  font-family: Lato; }
+
+.form-group {
+  width: 380px; }
+  @media (max-width: 642px) {
+    .form-group {
+      width: 100%; } }

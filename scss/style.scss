@@ -8,6 +8,7 @@
 @import 'base';
 @import 'forms';
 
+
 /* Components */
 @import 'main-nav';
 @import 'post';
@@ -15,8 +16,5 @@
 @import 'footer';
 @import 'about';
 @import 'hex';
+@import 'canvas';
 
-
-#myCanvas {
-    border: 1px solid;
-}

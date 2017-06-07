@@ -1,0 +1,40 @@
+#myCanvas {
+    margin: 10px;
+    border: 1px solid;
+    @media (max-width: $mobile-breakpoint) {
+        width: 85%;
+        padding: em(10px) em(10px);
+  }
+}
+
+.post-img-canvas{
+  @media (max-width: $mobile-breakpoint) {
+    width: 85%;
+    padding: em(10px) em(10px);
+  }
+}
+.post-text-canvas {
+    margin: 100px;
+    // line-height: 1.8;
+    // letter-spacing: 0.6px;
+    position: relative;
+    // padding: em(40px) 0;
+    flex: 0 1 calc(50% - 2em);
+    margin-right: 220px;
+    color: #d7fcf5;
+    font-family: Lato;
+    font-weight: 400;
+    // line-height: em(22px);
+    @media (max-width: $mobile-breakpoint) {
+        flex: 1 1 100%;
+    }
+}
+.inputText{
+    font-family: Lato;
+}
+.form-group{
+    width: 380px;
+    @media (max-width: $mobile-breakpoint) {
+    width: 100%;
+  }
+}

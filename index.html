@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Coding Academy</title>
+
     <link href="https://fonts.googleapis.com/css?family=Lato|Maven+Pro" rel="stylesheet">
     <link rel="stylesheet" href="dist/style.css">
 </head>
@@ -21,50 +22,6 @@
         </ul>
     </nav>
     <p class="colorstrip"></p>
-
-    <!--<div class="container">
-        <section class="post-container flex flex-wrap space-between">
-            <div class="post-img">
-                <img src="assets/img/anger.png" alt="main-post" class="img-responsive">
-            </div>
-            <div class="post-img">
-                <img src="assets/img/boredom.png" alt="main-post" class="img-responsive">
-            </div>
-            <div class="post-img">
-                <img src="assets/img/crazy.png" alt="main-post" class="img-responsive">
-            </div>
-            <div class="post-img">
-                <img src="assets/img/happy.png" alt="main-post" class="img-responsive">
-            </div>
-
-
-            <div class="post-img">
-                <img src="assets/img/hunt.png" alt="main-post" class="img-responsive">
-            </div>
-            <div class="post-img">
-                <img src="assets/img/kindness.png" alt="main-post" class="img-responsive">
-            </div>
-            <div class="post-img">
-                <img src="assets/img/positive.png" alt="main-post" class="img-responsive">
-            </div>
-            <div class="post-img">
-                <img src="assets/img/mockery.png" alt="main-post" class="img-responsive">
-            </div>
-                        <div class="post-img">
-                <img src="assets/img/shok.png" alt="main-post" class="img-responsive">
-            </div>
-            <div class="post-img">
-                <img src="assets/img/sick.png" alt="main-post" class="img-responsive">
-            </div>
-            <div class="post-img">
-                <img src="assets/img/smile.png" alt="main-post" class="img-responsive">
-            </div>
-            <div class="post-img">
-                <img src="assets/img/struggle.png" alt="main-post" class="img-responsive">
-            </div>
-        </section>
-    </div>
-</div>-->
 
 
  <ul id="hexGrid">
@@ -142,7 +99,51 @@
       </li>
     </ul>
 
+        <div class="app-canvas">
+            <div class="container-canvas">
+            <section class="post-container-canvas flex flex-wrap space-between">
+                    <canvas id="myCanvas" width="400" height="400"></canvas>
 
+                    <div class="post-text-canvas" flex align-center>
+                        <label for="inputText" class="inputText">Editor to Meme Creator</label>
+                        <div class="form-group">
+                            <input type="text" class="form-control" id="myTextFirst" placeholder="Text">
+                        </div>
+                        <div class="form-group">
+                            <input type="text" class="form-control" id="myTextSecond" placeholder="Text">
+                    </div>
+
+                    <button type="button" class="btn btn-default" aria-label="Left Align">
+                        <span class="glyphicon glyphicon-trash" aria-hidden="true"></span>
+                    </button>
+                    <button type="button" class="btn btn-default" aria-label="Left Align">
+                        <span class="glyphicon glyphicon-font" aria-hidden="true"></span>
+                    </button>
+                    <button type="button" class="btn btn-default" aria-label="Left Align">
+                        <span class="glyphicon glyphicon-yen" aria-hidden="true"></span>
+                    </button>
+                    <button type="button" class="btn btn-default" aria-label="Left Align">
+                        <span class="glyphicon glyphicon-tint" aria-hidden="true"></span>
+                    </button>
+                    <button type="button" class="btn btn-default" aria-label="Left Align">
+                        <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
+                    </button>
+                    <button type="button" class="btn btn-default" aria-label="Left Align">
+                        <span class="glyphicon glyphicon-minus" aria-hidden="true"></span>
+                    </button>
+                    <button type="button" class="btn btn-default" aria-label="Left Align">
+                        <span class="glyphicon glyphicon-align-left" aria-hidden="true"></span>
+                    </button>
+                    <button type="button" class="btn btn-default" aria-label="Left Align">
+                        <span class="glyphicon glyphicon-align-center" aria-hidden="true"></span>
+                    </button>
+                    <button type="button" class="btn btn-default" aria-label="Left Align">
+                        <span class="glyphicon glyphicon-align-right" aria-hidden="true"></span>
+                    </button>
+                </div>
+            </section>
+          </div>
+        </div>
 
 
     <hr class="hr">
@@ -150,9 +151,7 @@
             <div class="container-about">
              <section class="post-container-about flex flex-wrap space-between">
                     <div class="post-img-about">
-                      <!--<div class="innerclip">-->
                         <img class="img-about" src="assets/img/evyatar.jpg" alt="main-post" class="img-responsive">
-                      <!--</div>-->
                     </div>
 
                     <div class="post-text" flex align-center>
@@ -176,9 +175,7 @@
                  </hr>
                  <section class="post-container-about flex flex-wrap space-between">
                     <div class="post-img-about">
-                        <!--<div class="innerclip">-->
                         <img class="img-about" src="assets/img/lora.jpg" alt="main-post" class="img-responsive">
-                        <!--</div>-->
                     </div>
                     <div class="post-text">
                         <h1>Lora Arshavski</h1>
@@ -238,7 +235,7 @@
         <li class="foter-text">&copy; 2017 Coding Academy</span>
         </li>
     </footer>
-
+    <script src="//cdnjs.cloudflare.com/ajax/libs/x-editable/1.5.0/bootstrap3-editable/js/bootstrap-editable.min.js"></script>
+    <script src="js/main.js"></script>
 </body>
-
 </html>
