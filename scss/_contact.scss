@@ -55,7 +55,10 @@
             &::-webkit-input-placeholder{
                 color:#afafaf;
             }
-
+            &[type=submit]{
+                max-width:150px;
+                float:right;
+            }
         }
         textarea{
             font-family:var(--primary-font);
@@ -124,4 +127,6 @@
     textarea {
         resize: none;
     }
+   
+    
 }

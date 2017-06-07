@@ -560,6 +560,9 @@ fieldset {
           color: #afafaf; }
         .contact-container .contact .contact-form input::-webkit-input-placeholder {
           color: #afafaf; }
+        .contact-container .contact .contact-form input[type=submit] {
+          max-width: 150px;
+          float: right; }
       .contact-container .contact .contact-form textarea {
         font-family: var(--primary-font);
         border: none;

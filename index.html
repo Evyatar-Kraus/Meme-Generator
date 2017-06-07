@@ -95,12 +95,12 @@
             <div class="contact-body">
                 <section class="contact-form">
 
-                    <form>
-                        <input type="text" placeholder="Name (Required):" required></input>
-                        <input type="email" placeholder="Email (Required):" required></input>
-                        <input type="email" placeholder="Subject:"></input>
-                        <textarea placeholder="Write your message here"></textarea>
-                        <submit>Send</submit>
+                    <form method="GET" action="#" onsubmit="return saveFormToLocalStorage(event)">
+                        <input type="text" name="name" placeholder="Name (Required):" required></input>
+                        <input type="email" name="email" placeholder="Email (Required):" required></input>
+                        <input type="text" name="subject" placeholder="Subject:"></input>
+                        <textarea name="message" placeholder="Write your message here"></textarea>
+                       <input type="submit" value="send"></input>
                     </form>
                 </section>
 

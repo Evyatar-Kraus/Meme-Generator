@@ -107,10 +107,29 @@ function renderKeywords() {
         elKeywords.innerHTML += `<span onclick="keyWordClicked('${keyword}')"
                            style="font-size: ${(10 + (20 * keywordByOccurence[keyword]))}px">${keyword}</span> `;
     }
-    console.log(elKeywords);
+    
 }
 
 
+function saveFormToLocalStorage(e){
+     
+    if(!(localStorage.getItem('contactMessages'))){
+        localStorage.setItem('contactMessages',JSON.stringify([]));
+    }
+    
+    var message ={};
+    for(var i = 0; i < e.target.elements.length-1; i++){
+        var currFormControl = e.target.elements[i];
+        message[currFormControl.name] = currFormControl.value;
+    }
+    
+    var savedMessages = JSON.parse(localStorage.getItem('contactMessages'));
+    
+    savedMessages.push(message);
+    
+    localStorage.setItem('contactMessages',JSON.stringify(savedMessages));
+    e.preventDefault();  
+}
 
 
 //function to open the meme editor on click on the hexagons or by url
