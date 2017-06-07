@@ -823,6 +823,9 @@ body {
   #hexGrid {
     font-size: 13px; } }
 
+.keywords {
+  max-width: 500px; }
+
 #myCanvas {
   margin: 10px;
   border: 1px solid; }

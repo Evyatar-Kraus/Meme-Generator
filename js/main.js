@@ -11,6 +11,7 @@ function renderCanvas(state){
 
 }
 
+
 function initCanvas(){
     var canvas = document.getElementById("myCanvas");
     var context = canvas.getContext("2d");
@@ -27,7 +28,8 @@ function initCanvas(){
     return [canvas, context];
 }
 
-window.onload = function(){
+// window.onload = function(){
+    window.addEventListener('load', function(){
     initCanvas();
     document.querySelector('#myTextFirst').addEventListener('keyup', function(event){
         let [canvas, context] = initCanvas();
@@ -39,6 +41,4 @@ window.onload = function(){
         // context.fillText(event.target.value, canvas.width/2, 40);
         context.fillText(event.target.value, canvas.width/2, canvas.height-140);
     },false);
-
-
-};
+});
