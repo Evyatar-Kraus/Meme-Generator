@@ -822,3 +822,6 @@ body {
 @media (max-width: 400px) {
   #hexGrid {
     font-size: 13px; } }
+
+#myCanvas {
+  border: 1px solid; }
