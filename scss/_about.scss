@@ -31,14 +31,20 @@ h2{
     line-height: em(22px);
 }
 
-.post-img-about {
-  margin-bottom: em(100px);
+// .post-img-about {
+//   margin-bottom: em(100px);
+// }
+.post-img-about{
+    // margin-bottom: em(100px);
+  @media (max-width: $mobile-breakpoint) {
+    width: 100%;
+    padding: em(10px) em(10px);
+  }
 }
 
-
 .post-text {
-    line-height: 1.8;
-    letter-spacing: 0.6px;
+    // line-height: 1.8;
+    // letter-spacing: 0.6px;
     position: relative;
     // padding: em(40px) 0;
     flex: 0 1 calc(50% - 2em);
@@ -46,8 +52,8 @@ h2{
     color: #d7fcf5;
     font-family: Lato;
     font-weight: 400;
-    line-height: em(22px);
-    @media (max-width: $container-width) {
+    // line-height: em(22px);
+    @media (max-width: $mobile-breakpoint) {
         flex: 1 1 100%;
     }
 }
@@ -57,7 +63,7 @@ h2{
     flex-flow:row wrap
 }
 .inner-links{
-    margin-left: 750px;
+    margin-left: 650px;
     @media (max-width: $container-width) {
         margin-left: 0;
   }
