@@ -12,7 +12,9 @@ var gImages = [
     { id: 8, url: "assets/img/troll-fixed.png", keywords: ['troll', 'face'] }
 ];
 
-var gState = { renderMode: 'hexagons' };
+var gState = { 
+    renderMode: 'hexagons' 
+};
 
 var elSearchByKeyword = document.querySelector('.image-search');
 var elKeywords = document.querySelector('.keywords');
@@ -33,13 +35,14 @@ function renderMemeImagesAsHexagons() {
     elImagesContainer.innerHTML = strHtml;
 }
 
+
 // rendering meme hexagons images when page loads or when returning from editor
 function renderMemeImagesAsList() {
     gState.renderMode = 'list';
     var elImagesContainer = document.querySelector('.images-container');
     var strHtml = '<ul class="list-images">';
     gImages.forEach(function (image, imageIndex) {
-        strHtml += '<li  class="list-image" onclick="openMemeEditor(' + imageIndex + ')"><img style="width:30;height:35px;" src="' + image.url + '" alt="" /><span>Click on the image to open the meme editor</span></li>';
+        strHtml += '<li  class="list-image" onclick="openMemeEditor(' + (imageIndex+1)+ ')"><img style="width:30;height:35px;" src="' + image.url + '" alt="" /><span>Click on the image to open the meme editor</span></li>';
     });
     strHtml += '</ul>';
     elImagesContainer.innerHTML = strHtml;
@@ -131,7 +134,7 @@ function renderKeywords() {
 
 
         elKeywords.innerHTML += `<span onclick="keyWordClicked('${keyword}')"
-                           style="font-size: ${(1 + (0.5 * keywordByOccurence[keyword]))}rem">${keyword}</span> `;
+                           style="font-size: ${(1 + (0.3 * keywordByOccurence[keyword]))}rem">${keyword}</span> `;
     }
 
 }
@@ -160,24 +163,23 @@ function saveFormToLocalStorage(e) {
 
 //function to open the meme editor on click on the hexagons or by url
 function openMemeEditor(imageIndex) {
+    document.querySelector('.meme-choice').classList.add('hidden');
+    document.querySelector('.app-canvas').classList.remove('hidden');
     gState.selectedImgId = imageIndex;
     renderCanvas();
     console.log('2');
 }
 
 
-
-//function to open the meme editor on click on the hexagons or by url
-function openMemeEditorForUrl(url) {
-
-    // var c = document.getElementById("myCanvas");
-    // var ctx = c.getContext("2d");
-    // var img = new Image();
-    // img.onload = function() {
-    //   ctx.drawImage(img, 0, 0);
-    // };
-    // img.src = 'https://cdn.sstatic.net/stackexchange/img/logos/so/so-icon.png';
-
+function editorBackButtonClicked(){
+    document.querySelector('.app-canvas').classList.add('hidden');
+    document.querySelector('.meme-choice').classList.remove('hidden');
+    
+    // if(gState.renderMode='hexagons'){
+    //     renderMemeImagesAsHexagons();
+    // }else if(gState.renderMode='list'){
+    //     renderMemeImagesAsList();
+    // }
 }
 
 

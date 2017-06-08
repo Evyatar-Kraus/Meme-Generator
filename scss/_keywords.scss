@@ -1,7 +1,7 @@
 
 .meme-generator{
     min-height:490px;
-    max-width:900px;
+    
     margin:0 auto;
 }
 
@@ -27,7 +27,8 @@
     .keywords-container{
           flex: 1;
          min-width:60px;
-        
+            border: 2px solid black;
+            padding: 20px;
        
         
         .keywords{
