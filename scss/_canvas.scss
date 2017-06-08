@@ -1,5 +1,5 @@
 #myCanvas {
-    margin: 10px;
+    // margin: 50px;
     border: 1px solid;
     @media (max-width: $mobile-breakpoint) {
         width: 85%;
@@ -14,17 +14,13 @@
   }
 }
 .post-text-canvas {
-    margin: 100px;
-    // line-height: 1.8;
-    // letter-spacing: 0.6px;
+    margin: em(100px);
     position: relative;
-    // padding: em(40px) 0;
     flex: 0 1 calc(50% - 2em);
-    margin-right: 220px;
+    margin-right: em(220px);
     color: #d7fcf5;
     font-family: Lato;
     font-weight: 400;
-    // line-height: em(22px);
     @media (max-width: $mobile-breakpoint) {
         flex: 1 1 100%;
     }

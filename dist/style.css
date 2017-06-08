@@ -826,11 +826,7 @@ body {
   #hexGrid {
     font-size: 13px; } }
 
-.keywords {
-  max-width: 500px; }
-
 #myCanvas {
-  margin: 10px;
   border: 1px solid; }
   @media (max-width: 642px) {
     #myCanvas {
@@ -843,10 +839,10 @@ body {
     padding: 0.625em 0.625em; } }
 
 .post-text-canvas {
-  margin: 100px;
+  margin: 6.25em;
   position: relative;
   flex: 0 1 calc(50% - 2em);
-  margin-right: 220px;
+  margin-right: 13.75em;
   color: #d7fcf5;
   font-family: Lato;
   font-weight: 400; }
@@ -862,3 +858,6 @@ body {
   @media (max-width: 642px) {
     .form-group {
       width: 100%; } }
+
+.keywords {
+  max-width: 500px; }

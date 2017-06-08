@@ -27,7 +27,7 @@
       <li class="hex">
         <div class="hexIn">
           <a class="hexLink" href="#">
-            <img src="assets/img/too-funny-fixed.png" alt="" />
+            <img id="img1" src="assets/img/too-funny-fixed.png" alt="" />
             <h1>Click The Meme</h1>
             <p>To open the Meme Generator</p>
           </a>
@@ -36,7 +36,7 @@
       <li class="hex">
         <div class="hexIn">
           <a class="hexLink" href="#">
-            <img src="assets/img/busy-fixed.jpg" alt="" />
+            <img id="img2" src="assets/img/busy-fixed.jpg" alt="" />
             <h1>Click The Meme</h1>
             <p>To open the Meme Generator</p>
           </a>
@@ -45,7 +45,7 @@
       <li class="hex">
         <div class="hexIn">
           <a class="hexLink" href="#">
-            <img src="assets/img/haha-fixed.png" alt="" />
+            <img id="img3" src="assets/img/haha-fixed.png" alt="" />
             <h1>Click The Meme</h1>
             <p>To open the Meme Generator</p>
           </a>
@@ -54,7 +54,7 @@
       <li class="hex">
         <div class="hexIn">
           <a class="hexLink" href="#">
-            <img src="assets/img/hilarious-fixed.png" alt="" />
+            <img id="img4" src="assets/img/hilarious-fixed.png" alt="" />
             <h1>Click The Meme</h1>
             <p>To open the Meme Generator</p>
           </a>
@@ -63,7 +63,7 @@
       <li class="hex">
         <div class="hexIn">
           <a class="hexLink" href="#">
-            <img src="assets/img/positive-fixed.jpg" alt="" />
+            <img id="img5" src="assets/img/positive-fixed.jpg" alt="" />
             <h1>Click The Meme</h1>
             <p>To open the Meme Generator</p>
           </a>
@@ -72,7 +72,7 @@
       <li class="hex">
         <div class="hexIn">
           <a class="hexLink" href="#">
-            <img src="assets/img/shock-fixed.jpg" alt="" />
+            <img id="img6" src="assets/img/shock-fixed.jpg" alt="" />
             <h1>Click The Meme</h1>
             <p>To open the Meme Generator</p>
           </a>
@@ -81,7 +81,7 @@
       <li class="hex">
         <div class="hexIn">
           <a class="hexLink" href="#">
-            <img src="assets/img/suprise-fixed.jpg" alt="" />
+            <img id="img7" src="assets/img/suprise-fixed.jpg" alt="" />
             <h1>Click The Meme</h1>
             <p>To open the Meme Generator</p>
           </a>
@@ -90,7 +90,7 @@
       <li class="hex">
         <div class="hexIn">
           <a class="hexLink" href="#">
-            <img src="assets/img/troll-fixed.png" alt="" />
+            <img id="img8" src="assets/img/troll-fixed.png" alt="" />
             <h1>Click The Meme</h1>
             <p>To open the Meme Generator</p>
           </a>
@@ -99,45 +99,83 @@
     </ul>
 
         <div class="app-canvas">
-            <div class="container-canvas">
-            <section class="post-container-canvas flex flex-wrap space-between">
-                    <canvas id="myCanvas" width="400" height="400"></canvas>
+            <div class="container-canvas flex align-center justify-center">
+            <section class="post-container-canvas flex align-center justify-center">
+                    <canvas id="myCanvas" width="400" height="458"></canvas>
 
-                    <div class="post-text-canvas" flex align-center>
+                    <div class="post-text-canvas">
                         <label for="inputText" class="inputText">Editor to Meme Creator</label>
                         <div class="form-group">
                             <input type="text" class="form-control" id="myTextFirst" placeholder="Text">
                         </div>
+
+                        <a id="topArhive" class="btn btn-default" aria-label="Arhive">
+                            <span class="glyphicon glyphicon-trash" aria-hidden="true"></span>
+                        </a>
+                        <button type="button" class="btn btn-default" aria-label="Left Align">
+                            <span class="glyphicon glyphicon-font" aria-hidden="true"></span>
+                        </button>
+                        <button type="button" class="btn btn-default" aria-label="Left Align">
+                            <span class="glyphicon glyphicon-yen" aria-hidden="true"></span>
+                        </button>
+                        <button type="button" id="topColorText" class="btn btn-default" aria-label="Color Text">
+                            <span class="glyphicon glyphicon-tint" aria-hidden="true"></span>
+                        </button>
+                        <a id="topPlus" class="btn btn-default" aria-label="Plus">
+                            <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
+                        </a>
+                        <a id="topMinus" class="btn btn-default" aria-label="Minus">
+                            <span class="glyphicon glyphicon-minus" aria-hidden="true"></span>
+                        </a>
+                        <button type="button" id="left" class="btn btn-default topAlign" aria-label="Left Align">
+                            <span class="glyphicon glyphicon-align-left" aria-hidden="true"></span>
+                        </button>
+                        <button type="button" id="center" class="btn btn-default topAlign" aria-label="Center Align">
+                            <span class="glyphicon glyphicon-align-center" aria-hidden="true"></span>
+                        </button>
+                        <button type="button" id="right" class="btn btn-default topAlign" aria-label="Right Align">
+                            <span class="glyphicon glyphicon-align-right" aria-hidden="true"></span>
+                        </button>
+
+                        <form name="colorForm"> 
+                            <p>Select Background Color 
+                                <input name="colorpicker" type="color" onchange="newBackgroundColor(colorpicker.value);"> 
+                            </p>    
+                        </form>
+
                         <div class="form-group">
                             <input type="text" class="form-control" id="myTextSecond" placeholder="Text">
-                    </div>
-                    <button type="button" class="btn btn-default" aria-label="Left Align">
-                        <span class="glyphicon glyphicon-trash" aria-hidden="true"></span>
-                    </button>
-                    <button type="button" class="btn btn-default" aria-label="Left Align">
-                        <span class="glyphicon glyphicon-font" aria-hidden="true"></span>
-                    </button>
-                    <button type="button" class="btn btn-default" aria-label="Left Align">
-                        <span class="glyphicon glyphicon-yen" aria-hidden="true"></span>
-                    </button>
-                    <button type="button" class="btn btn-default" aria-label="Left Align">
-                        <span class="glyphicon glyphicon-tint" aria-hidden="true"></span>
-                    </button>
-                    <button type="button" class="btn btn-default" aria-label="Left Align">
-                        <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
-                    </button>
-                    <button type="button" class="btn btn-default" aria-label="Left Align">
-                        <span class="glyphicon glyphicon-minus" aria-hidden="true"></span>
-                    </button>
-                    <button type="button" class="btn btn-default" aria-label="Left Align">
-                        <span class="glyphicon glyphicon-align-left" aria-hidden="true"></span>
-                    </button>
-                    <button type="button" class="btn btn-default" aria-label="Left Align">
-                        <span class="glyphicon glyphicon-align-center" aria-hidden="true"></span>
-                    </button>
-                    <button type="button" class="btn btn-default" aria-label="Left Align">
-                        <span class="glyphicon glyphicon-align-right" aria-hidden="true"></span>
-                    </button>
+                        </div>
+                        <a id="bottomArhive" class="btn btn-default" aria-label="Arhive">
+                            <span class="glyphicon glyphicon-trash" aria-hidden="true"></span>
+                        </a>
+                        <button type="button" class="btn btn-default" aria-label="Left Align">
+                            <span class="glyphicon glyphicon-font" aria-hidden="true"></span>
+                        </button>
+                        <button type="button" class="btn btn-default" aria-label="Left Align">
+                            <span class="glyphicon glyphicon-yen" aria-hidden="true"></span>
+                        </button>
+                        <a id="bottomColorText" class="btn btn-default" aria-label="Color Text"> 
+                                <input id='bottomColor' type="color" onchange="newColor(colorpicker.value);">   
+                        </a>
+                        <a id="bottomPlus" class="btn btn-default" aria-label="Plus">
+                            <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
+                        </a>
+                        <a id="bottomMinus" class="btn btn-default" aria-label="Minus">
+                            <span class="glyphicon glyphicon-minus" aria-hidden="true"></span>
+                        </a>
+                        <button type="button" id="left" class="btn btn-default bottomAlign" aria-label="Left Align">
+                            <span class="glyphicon glyphicon-align-left" aria-hidden="true"></span>
+                        </button>
+                        <button type="button" id="center" class="btn btn-default bottomAlign" aria-label="Center Align">
+                            <span class="glyphicon glyphicon-align-center" aria-hidden="true"></span>
+                        </button>
+                        <button type="button" id="right" class="btn btn-default bottomAlign" aria-label="Right Align">
+                            <span class="glyphicon glyphicon-align-right" aria-hidden="true"></span>
+                        </button>
+                        <div>
+                        <button type="button" id="btnSave" class="btn btn-default">Save</button>
+                        </div>
                 </div>
             </section>
           </div>
