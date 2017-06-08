@@ -43,9 +43,6 @@ h2{
 }
 
 
-.post-img-about{
- 
-}
 
 .post-text {
   @media (max-width: $mobile-breakpoint) {
@@ -53,75 +50,3 @@ h2{
  }
    
 }
-.post-container-about {
-    
-}
-.inner-links{
-  
-}
-
-///////////////////////////////////////////
-
-
-// .about {
-//     background-color: #2eb398;
-// }
-
-// .container-about {
-//     margin: 0 auto;
-//     padding: em(1px) 0;
-//     width: 100%;
-//     max-width: em(1020px);
-//     border-left: 1px solid gray;
-//     border-right: 1px solid gray;
-// }
-
-// h1 {
-//     color: #d7fcf5;
-//     font-family: "Maven Pro Regular";
-//     font-size: em(30px);
-//     font-weight: 400;
-//     line-height: em(5px);
-// }
-
-// h2{
-//     width: em(249px);
-//     height: em(17px);
-//     color: #20816d;
-//     font-family: "Maven Pro Regular";
-//     font-size: em(18px);
-//     font-weight: 400;
-//     line-height: em(22px);
-// }
-
-
-// .post-img-about{
-    
-//   @media (max-width: $mobile-breakpoint) {
-//     width: 100%;
-//     padding: em(10px) em(10px);
-//   }
-// }
-
-// .post-text {
-//     position: relative;
-//     flex: 0 1 calc(50% - 2em);
-//     margin-right: 220px;
-//     color: #d7fcf5;
-//     font-family: Lato;
-//     font-weight: 400;
-//     @media (max-width: $mobile-breakpoint) {
-//         flex: 1 1 100%;
-//     }
-// }
-// .post-container-about {
-//     margin: em(90px);
-//     display: flex; 
-//     flex-flow:row wrap
-// }
-// .inner-links{
-//     margin-left: 650px;
-//     @media (max-width: $container-width) {
-//         margin-left: 0;
-//   }
-// }

@@ -26,15 +26,16 @@
 
     .keywords-container{
           flex: 1;
-         min-width:60px;
+           
+
             border: 2px solid black;
             padding: 20px;
-       
+            
         
         .keywords{
         display:inline-block;
         margin:0;
-        
+            
     
         }
     }
@@ -43,4 +44,9 @@
         content:"";
         clear:both;
     }
+}
+.keywords-container{
+
+ max-width: 200px !important;
+    word-break: break-word !important;
 }

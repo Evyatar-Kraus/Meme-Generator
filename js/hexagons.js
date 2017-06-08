@@ -172,15 +172,8 @@ function openMemeEditor(imageIndex) {
 
 
 function editorBackButtonClicked(){
-
     document.querySelector('.app-canvas').classList.add('hidden');
     document.querySelector('.meme-choice').classList.remove('hidden');
-    
-    // if(gState.renderMode='hexagons'){
-    //     renderMemeImagesAsHexagons();
-    // }else if(gState.renderMode='list'){
-    //     renderMemeImagesAsList();
-    // }
 }
 
 
