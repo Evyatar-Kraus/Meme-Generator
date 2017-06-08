@@ -86,8 +86,8 @@ body {
           transition:          transform .2s ease-out, opacity .3s ease-out;
 }
 .hex h1 {
-  bottom: 40%;
-  padding-top:35%;
+  bottom: 50%;
+  padding-top:45%;
   font-size: 1.5em;
   z-index: 1;
   -webkit-transform:translate3d(0,-100%,0);
@@ -105,7 +105,7 @@ body {
 }
 .hex p {
   top: 45%;
-  padding-bottom:30%;
+  padding-bottom:45%;
   -webkit-transform:translate3d(0,100%,0);
       -ms-transform:translate3d(0,100%,0);
           transform:translate3d(0,100%,0);

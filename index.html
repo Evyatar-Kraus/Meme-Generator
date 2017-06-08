@@ -11,7 +11,6 @@
 
 <body style="background-color:#ffffff">
 
-
     <nav class="main-nav flex align-center justify-center">
         <ul class="clean-list flex">
             <li class="active"><a href="#portfolio"><span>PORTFOLIO</span></a></li>
@@ -24,20 +23,24 @@
         </ul>
     </nav>
 
-
+    <div class="meme-choice" />
     <section class="meme-generator">
         <a name="portfolio"></a>
         <div class="generator-menu">
             <h1 style="display:inline-block; font-size:3em;line-height:30px;color:#323232">Meme Generator</h1>
             <div style="float:right;">
+
                 <button onclick="renderMemeImagesAsHexagons()"><img src="assets/img/hexagon.svg" style="min-width:32px;"/></button>
                 <button onclick="renderMemeImagesAsList()"><img src="assets/img/list.png" style="max-width:32px;" /></button>
+
                 <input class="image-search" type="text" placeholder="search by keyword" oninput="searchImageByKeyWord()"></input>
             </div>
         </div>
 
+
         <section class="images-section">
             <section class="images-container" >
+
                 <!--<ul id="hexGrid">
                     <li class="hex">
                         <div class="hexIn">
@@ -118,10 +121,18 @@
             </div>
         </section>
 
+        </div>
+        <div class="app-canvas hidden">
+            
+            <div class="container-canvas flex align-center justify-center">
+              
                 <section class="post-container-canvas flex align-center justify-center">
+                    
                     <canvas id="myCanvas" width="400" height="458"></canvas>
 
                     <div class="post-text-canvas">
+                    
+                        
                         <label for="inputText" class="inputText">Editor to Meme Creator</label>
                         <div class="form-group">
                             <input type="text" class="form-control" id="myTextFirst" placeholder="Text">
@@ -188,11 +199,18 @@
                             <span class="glyphicon glyphicon-align-right" aria-hidden="true"></span>
                         </button>
                         <div>
+
                         <a href="#" type="button" id="btnSave" class="btn btn-default">Save</a>
+                            <button type="button" id="btnSave" class="btn btn-default">Save</button>
+                             <button style="float:right" onclick="editorBackButtonClicked()" type="button" class="btn btn-danger">Back</button>
+                            
                         </div>
                     </div>
                 </section>
+              
+                
             </div>
+            
         </div>
 
 
@@ -287,6 +305,7 @@
             </div>
         </div>
     </div>
+
     <footer class="main-footer flex justify-center align-center clean-list">
         <li class="foter-text" style="color:#dddddd;font-size:2em;">&copy; 2017 Coding Academy</span>
         </li>

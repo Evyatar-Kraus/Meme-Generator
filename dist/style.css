@@ -453,11 +453,21 @@ template {
   width: var(--inner-container-width);
   margin: 0 auto; }
 
+.about * {
+  margin: 0 auto;
+  max-width: 1200px; }
+
+images-section .images-container {
+  flex: 0 0 85%; }
+
 html {
   font-size: 20px; }
   @media (max-width: 642px) {
     html {
       font-size: 40px; } }
+
+.hidden {
+  display: none; }
 
 /*----------  Flex Helpers  ----------*/
 .flex {
@@ -522,7 +532,7 @@ fieldset {
   flex-flow: row wrap; }
 
 .contact-container {
-  font-size: 1rem;
+  font-size: 1.3rem;
   width: 100%;
   margin: 0 auto;
   background-color: var(--contact-bg-color); }
@@ -530,13 +540,14 @@ fieldset {
     color: #dcdcdc;
     margin: 0; }
   .contact-container .contact {
+    max-width: 1200px;
     display: flex;
     flex-flow: column nowrap;
     justify-content: center;
     align-items: flex-start;
-    padding: 3% 0;
-    margin-left: 20%;
-    margin-right: 20%; }
+    margin: 0 auto;
+    padding-left: 20px;
+    padding-right: 20px; }
     .contact-container .contact .contact-heading > p {
       color: #bfbfbf; }
     .contact-container .contact .contact-body {
@@ -580,8 +591,9 @@ fieldset {
       margin-left: 1em;
       font-family: var(--primary-font); }
       .contact-container .contact .contact-details p {
-        line-height: 22px;
-        margin: 0;
+        padding: 0;
+        line-height: 2.3rem;
+        margin-bottom: 0.1rem;
         min-height: 50%;
         color: #bfbfbf; }
       .contact-container .contact .contact-details .emphasis {
@@ -614,6 +626,7 @@ fieldset {
   padding-bottom: 25px; }
 
 .container-about {
+  font-size: 1.7rem;
   display: flex;
   flex-flow: row nowrap;
   justify-content: space-around;
@@ -730,8 +743,8 @@ body {
   transition: transform .2s ease-out, opacity .3s ease-out; }
 
 .hex h1 {
-  bottom: 40%;
-  padding-top: 35%;
+  bottom: 50%;
+  padding-top: 45%;
   font-size: 1.5em;
   z-index: 1;
   -webkit-transform: translate3d(0, -100%, 0);
@@ -749,7 +762,7 @@ body {
 
 .hex p {
   top: 45%;
-  padding-bottom: 30%;
+  padding-bottom: 45%;
   -webkit-transform: translate3d(0, 100%, 0);
   -ms-transform: translate3d(0, 100%, 0);
   transform: translate3d(0, 100%, 0); }
@@ -856,15 +869,12 @@ body {
   margin-top: 10px; }
 
 ul.list-images {
-  width: 50%;
-  margin: 0 auto;
   list-style-type: none; }
   ul.list-images .list-image {
     margin-bottom: 20px; }
 
 .meme-generator {
   min-height: 490px;
-  max-width: 900px;
   margin: 0 auto; }
 
 .image-search {
@@ -880,7 +890,9 @@ ul.list-images {
     flex: 0 0 65%; }
   .images-section .keywords-container {
     flex: 1;
-    min-width: 60px; }
+    min-width: 60px;
+    border: 2px solid black;
+    padding: 20px; }
     .images-section .keywords-container .keywords {
       display: inline-block;
       margin: 0; }

@@ -12,14 +12,31 @@
 }
 
 
+.about *{
+  margin:0 auto;
+  max-width:1200px;
+}
+.contact-container .contact{
+  
+}
+
+
+images-section .images-container {
+    flex: 0 0 85%;
+      
+}
+
+
 html{
    font-size:20px;
    @media (max-width: $mobile-breakpoint) {
     font-size:40px;
  }
 }
-  
 
+.hidden{
+  display:none;
+}
 
 // @media (max-width: #{$container-width - 10}) {
 //   .container,
