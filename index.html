@@ -25,147 +25,178 @@
     </nav>
 
 
-
-    <!--<p class="colorstrip"></p>-->
     <section class="meme-generator">
-    <a name="portfolio"></a>
-    <div class="generator-menu" style="">
-        <h1 style="display:inline-block; font-size:3em;line-height:30px;color:#323232">Meme Generator</h1>
-        <div style="float:right">
-            <button style="" onclick="renderMemeImagesAsHexagons()"><img src="assets/img/hexagon.svg" style="min-width:32px;"/></button>
-            <button style="" onclick="renderMemeImagesAsList()"><img src="assets/img/list.png" style="max-width:32px;" /></button>
-            <input class="image-search" type="text" placeholder="search by keyword" oninput="searchImageByKeyWord()"></input>
+        <a name="portfolio"></a>
+        <div class="generator-menu" style="">
+            <h1 style="display:inline-block; font-size:3em;line-height:30px;color:#323232">Meme Generator</h1>
+            <div style="float:right;display:none;">
+                <button style="" onclick="renderMemeImagesAsHexagons()"><img src="assets/img/hexagon.svg" style="min-width:32px;"/></button>
+                <button style="" onclick="renderMemeImagesAsList()"><img src="assets/img/list.png" style="max-width:32px;" /></button>
+                <input class="image-search" type="text" placeholder="search by keyword" oninput="searchImageByKeyWord()"></input>
+            </div>
         </div>
-    </div>
 
-    <section class="images-section">
-        <section class="images-container">
-            <ul id="hexGrid">
-                <li class="hex">
-                    <div class="hexIn">
-                        <a class="hexLink" href="#">
-            <img src="assets/img/too-funny-fixed.png" alt="" />
-            <h1>Click</h1>
-            <p>To open Editor</p>
-          </a>
-                    </div>
-                </li>
-                <li class="hex">
-                    <div class="hexIn">
-                        <a class="hexLink" href="#">
-            <img src="assets/img/busy-fixed.jpg" alt="" />
-            <h1>Click</h1>
-            <p>To open Editor</p>
-          </a>
-                    </div>
-                </li>
-                <li class="hex">
-                    <div class="hexIn">
-                        <a class="hexLink" href="#">
-            <img src="assets/img/haha-fixed.png" alt="" />
-           <h1>Click</h1>
-            <p>To open Editor</p>
-          </a>
-                    </div>
-                </li>
-                <li class="hex">
-                    <div class="hexIn">
-                        <a class="hexLink" href="#">
-            <img src="assets/img/hilarious-fixed.png" alt="" />
-           <h1>Click</h1>
-            <p>To open Editor</p>
-          </a>
-                    </div>
-                </li>
-                <li class="hex">
-                    <div class="hexIn">
-                        <a class="hexLink" href="#">
-            <img src="assets/img/positive-fixed.jpg" alt="" />
-            <h1>Click</h1>
-            <p>To open Editor</p>
-          </a>
-                    </div>
-                </li>
-                <li class="hex">
-                    <div class="hexIn">
-                        <a class="hexLink" href="#">
-            <img src="assets/img/shock-fixed.jpg" alt="" />
-            <h1>Click</h1>
-            <p>To open Editor</p>
-          </a>
-                    </div>
-                </li>
-                <li class="hex">
-                    <div class="hexIn">
-                        <a class="hexLink" href="#">
-            <img src="assets/img/suprise-fixed.jpg" alt="" />
-            <h1>Click</h1>
-            <p>To open Editor</p>
-          </a>
-                    </div>
-                </li>
-                <li class="hex">
-                    <div class="hexIn">
-                        <a class="hexLink" href="#">
-            <img src="assets/img/troll-fixed.png" alt="" />
-            <h1>Click</h1>
-            <p>To open Editor</p>
-          </a>
-                    </div>
-                </li>
-            </ul>
-        </section>
+        <section class="images-section" style="display:none;">
+            <section class="images-container" >
+                <!--<ul id="hexGrid">
+                    <li class="hex">
+                        <div class="hexIn">
+                            <a class="hexLink" href="#">
+                                 <img src="assets/img/too-funny-fixed.png" alt="" />
+                                 <h1>Click</h1>
+                                  <p>To open Editor</p>
+                            </a>
+                        </div>
+                    </li>
+                    <li class="hex">
+                        <div class="hexIn">
+                            <a class="hexLink" href="#">
+                                <img src="assets/img/busy-fixed.jpg" alt="" />
+                                <h1>Click</h1>
+                                <p>To open Editor</p>
+                            </a>
+                        </div>
+                    </li>
+                    <li class="hex">
+                        <div class="hexIn">
+                            <a class="hexLink" href="#">
+                                <img src="assets/img/haha-fixed.png" alt="" />
+                                <h1>Click</h1>
+                                <p>To open Editor</p>
+                            </a>
+                        </div>
+                    </li>
+                    <li class="hex">
+                        <div class="hexIn">
+                            <a class="hexLink" href="#">
+                                <img src="assets/img/hilarious-fixed.png" alt="" />
+                                <h1>Click</h1>
+                                <p>To open Editor</p>
+                            </a>
+                        </div>
+                    </li>
+                    <li class="hex">
+                        <div class="hexIn">
+                            <a class="hexLink" href="#">
+                                <img src="assets/img/positive-fixed.jpg" alt="" />
+                                <h1>Click</h1>
+                                <p>To open Editor</p>
+                             </a>
+                        </div>
+                    </li>
+                    <li class="hex">
+                        <div class="hexIn">
+                            <a class="hexLink" href="#">
+                                 <img src="assets/img/shock-fixed.jpg" alt="" />
+                                  <h1>Click</h1>
+                                 <p>To open Editor</p>
+                             </a>
+                        </div>
+                    </li>
+                    <li class="hex">
+                        <div class="hexIn">
+                            <a class="hexLink" href="#">
+                                <img src="assets/img/suprise-fixed.jpg" alt="" />
+                                <h1>Click</h1>
+                                <p>To open Editor</p>
+                            </a>
+                        </div>
+                    </li>
+                    <li class="hex">
+                        <div class="hexIn">
+                            <a class="hexLink" href="#">
+                            <img src="assets/img/troll-fixed.png" alt="" />
+                            <h1>Click</h1>
+                            <p>To open Editor</p>
+                </ul>-->
 
-
-        <div class="keywords-container" style="">
-            <h1 style="color:#323232">Keywords :</h1>
-            <div class="keywords"></div>
-        </div>
-    </section>
-    <div class="app-canvas" style="display:none;">
-        <div class="container-canvas">
-            <section class="post-container-canvas flex flex-wrap space-between">
-                <canvas id="myCanvas" width="400" height="400"></canvas>
-
-                <div class="post-text-canvas" flex align-center>
-                    <label for="inputText" class="inputText">Editor to Meme Creator</label>
-                    <div class="form-group">
-                        <input type="text" class="form-control" id="myTextFirst" placeholder="Text">
-                    </div>
-                    <div class="form-group">
-                        <input type="text" class="form-control" id="myTextSecond" placeholder="Text">
-                    </div>
-                    <button type="button" class="btn btn-default" aria-label="Left Align">
-                        <span class="glyphicon glyphicon-trash" aria-hidden="true"></span>
-                    </button>
-                    <button type="button" class="btn btn-default" aria-label="Left Align">
-                        <span class="glyphicon glyphicon-font" aria-hidden="true"></span>
-                    </button>
-                    <button type="button" class="btn btn-default" aria-label="Left Align">
-                        <span class="glyphicon glyphicon-yen" aria-hidden="true"></span>
-                    </button>
-                    <button type="button" class="btn btn-default" aria-label="Left Align">
-                        <span class="glyphicon glyphicon-tint" aria-hidden="true"></span>
-                    </button>
-                    <button type="button" class="btn btn-default" aria-label="Left Align">
-                        <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
-                    </button>
-                    <button type="button" class="btn btn-default" aria-label="Left Align">
-                        <span class="glyphicon glyphicon-minus" aria-hidden="true"></span>
-                    </button>
-                    <button type="button" class="btn btn-default" aria-label="Left Align">
-                        <span class="glyphicon glyphicon-align-left" aria-hidden="true"></span>
-                    </button>
-                    <button type="button" class="btn btn-default" aria-label="Left Align">
-                        <span class="glyphicon glyphicon-align-center" aria-hidden="true"></span>
-                    </button>
-                    <button type="button" class="btn btn-default" aria-label="Left Align">
-                        <span class="glyphicon glyphicon-align-right" aria-hidden="true"></span>
-                    </button>
-                </div>
             </section>
+
+            <div class="keywords-container" style="">
+                <h1 style="color:#323232">Keywords :</h1>
+                <div class="keywords"></div>
+            </div>
+        </section>
+        <div class="app-canvas" style="">
+            <div class="container-canvas flex align-center justify-center">
+                <section class="post-container-canvas flex align-center justify-center">
+                    <canvas id="myCanvas" width="400" height="458"></canvas>
+
+                    <div class="post-text-canvas">
+                        <label for="inputText" class="inputText">Editor to Meme Creator</label>
+                        <div class="form-group">
+                            <input type="text" class="form-control" id="myTextFirst" placeholder="Text">
+                        </div>
+
+                        <a id="topArhive" class="btn btn-default" aria-label="Arhive">
+                            <span class="glyphicon glyphicon-trash" aria-hidden="true"></span>
+                        </a>
+                        <button type="button" class="btn btn-default" aria-label="Left Align">
+                            <span class="glyphicon glyphicon-font" aria-hidden="true"></span>
+                        </button>
+                        <!--<button type="button" class="btn btn-default" aria-label="Left Align">
+                            <span class="glyphicon glyphicon-yen" aria-hidden="true"></span>
+                        </button>-->
+                        <a id="topColorText" class="btn btn-default" aria-label="Color Text"> 
+                                <input id='topColor' type="color">   
+                        </a>
+                        <a id="topPlus" class="btn btn-default" aria-label="Plus">
+                            <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
+                        </a>
+                        <a id="topMinus" class="btn btn-default" aria-label="Minus">
+                            <span class="glyphicon glyphicon-minus" aria-hidden="true"></span>
+                        </a>
+                        <button type="button" id="left" class="btn btn-default topAlign" aria-label="Left Align">
+                            <span class="glyphicon glyphicon-align-left" aria-hidden="true"></span>
+                        </button>
+                        <button type="button" id="center" class="btn btn-default topAlign" aria-label="Center Align">
+                            <span class="glyphicon glyphicon-align-center" aria-hidden="true"></span>
+                        </button>
+                        <button type="button" id="right" class="btn btn-default topAlign" aria-label="Right Align">
+                            <span class="glyphicon glyphicon-align-right" aria-hidden="true"></span>
+                        </button>
+
+
+
+                        <div class="form-group">
+                            <input type="text" class="form-control" id="myTextSecond" placeholder="Text">
+                        </div>
+                        <a id="bottomArhive" class="btn btn-default" aria-label="Arhive">
+                            <span class="glyphicon glyphicon-trash" aria-hidden="true"></span>
+                        </a>
+                        <button type="button" class="btn btn-default" aria-label="Left Align">
+                            <span class="glyphicon glyphicon-font" aria-hidden="true"></span>
+                        </button>
+                        <!--<a id="bottomStroke" class="btn btn-default" aria-label="Stroke">
+                            <span class="glyphicon glyphicon-yen" aria-hidden="true"></span>
+                        </a>-->
+                        <a id="bottomColorText" class="btn btn-default" aria-label="Color Text"> 
+                                <input id='bottomColor' type="color">   
+                        </a>
+                        <a id="bottomPlus" class="btn btn-default" aria-label="Plus">
+                            <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
+                        </a>
+                        <a id="bottomMinus" class="btn btn-default" aria-label="Minus">
+                            <span class="glyphicon glyphicon-minus" aria-hidden="true"></span>
+                        </a>
+                        <button type="button" id="left" class="btn btn-default bottomAlign" aria-label="Left Align">
+                            <span class="glyphicon glyphicon-align-left" aria-hidden="true"></span>
+                        </button>
+                        <button type="button" id="center" class="btn btn-default bottomAlign" aria-label="Center Align">
+                            <span class="glyphicon glyphicon-align-center" aria-hidden="true"></span>
+                        </button>
+                        <button type="button" id="right" class="btn btn-default bottomAlign" aria-label="Right Align">
+                            <span class="glyphicon glyphicon-align-right" aria-hidden="true"></span>
+                        </button>
+                        <div>
+                            <button type="button" id="btnSave" class="btn btn-default">Save</button>
+                        </div>
+                    </div>
+                </section>
+            </div>
         </div>
-    </div>
+
+
     </section>
     <!--<hr class="hr">-->
 
@@ -221,10 +252,10 @@
         </div>
 
     </div>
-   
+
     <div class="contact-container">
-         
-    <a name="contact"></a>
+
+        <a name="contact"></a>
         <div class="contact">
             <div class="contact-heading">
                 <h3>Get In Touch</h3>

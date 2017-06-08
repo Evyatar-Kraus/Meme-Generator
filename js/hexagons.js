@@ -25,7 +25,9 @@ function renderMemeImagesAsHexagons() {
     var strHtml = '';
     strHtml += '<ul id="hexGrid">';
     gImages.forEach(function (image, imageIndex) {
-        strHtml += '<li class= "hex" onclick="openMemeEditor(' + imageIndex + ')"><div class="hexIn"><a class="hexLink" href="#"><img src="' + image.url + '" alt="" /><h1>Click</h1><p>To open Editor</p></a></div></li>';
+
+        strHtml += '<li class= "hex" onclick="openMemeEditor(' + (imageIndex+1) + ')"><div class="hexIn"><a class="hexLink" href="#"><img src="' + image.url + '" alt="" /><h1>Click</h1><p>To open Editor</p></a></div></li>';
+
     });
     strHtml += '</ul>';
     elImagesContainer.innerHTML = strHtml;
@@ -158,9 +160,9 @@ function saveFormToLocalStorage(e) {
 
 //function to open the meme editor on click on the hexagons or by url
 function openMemeEditor(imageIndex) {
-
-    console.log(imageIndex);
-
+    gState.selectedImgId = imageIndex;
+    renderCanvas();
+    console.log('2');
 }
 
 
