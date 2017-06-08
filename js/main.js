@@ -19,7 +19,8 @@ var gState = {
         bottomSize: 30,
         topAlign: 'center',
         bottomAlign: 'center',
-        color: 'red'
+        topColor: 'black',
+        bottomColor: 'black'
     }
 }
 
@@ -31,7 +32,7 @@ function renderCanvas(){
     context.clearRect ( 0 , 0 ,canvas.height , canvas.width );
     imageObj.onload = function(){
         context.drawImage(imageObj, 0, 0);
-        context.fillStyle = gState.txts.color;
+        // context.fillStyle = gState.txts.color;
         drawTexts(canvas, context);
     };
     imageObj.src = gImgs.filter(function(el){
@@ -44,8 +45,10 @@ function drawTexts(canvas, context) {
     [gState.txts.firstText, gState.txts.secondText].forEach(function(text) {
         var align = (text === gState.txts.firstText) ? gState.txts.topAlign : gState.txts.bottomAlign;
         var size = (text === gState.txts.firstText) ? gState.txts.topSize : gState.txts.bottomSize;
+        var color = (text === gState.txts.firstText) ? gState.txts.topColor : gState.txts.bottomColor;
         var yCoords = (text === gState.txts.firstText) ? 40 : canvas.height-40;
         context.font = size + "px Calibri";
+        context.fillStyle = color;
         if(align === 'left'){
             context.textAlign = align;
             context.fillText(text, 40, yCoords);
@@ -106,7 +109,7 @@ window.addEventListener('load', function(){
             renderCanvas();
         }, false);
     }
-//zoom + to bottom button
+//zoom - to bottom button
     document.querySelector('#topMinus').addEventListener('click', function(event){
         gState.txts.topSize--;
         renderCanvas();
@@ -133,10 +136,28 @@ window.addEventListener('load', function(){
     });
 //arhive text from  on button
         document.querySelector('#bottomArhive').addEventListener('click', function(event){
-        gState.txts.secondText = '';
+            gState.txts.secondText = '';
         renderCanvas();
     });
-//add color to text
+//add color to top text  
+        document.querySelector('#topColor').addEventListener('change', function(event){
+            gState.txts.topColor = event.target.value;
+            renderCanvas();
+        },false);
+//add color to bottom text  
+        document.querySelector('#bottomColor').addEventListener('change', function(event){
+            gState.txts.bottomColor = event.target.value;
+            renderCanvas();
+        },false);
 
 
+//add stroke text
+        document.querySelector('#bottomStroke').addEventListener('change', function(event){
+
+
+
+
+            gState.txts.bottomColor = event.target.value;
+            renderCanvas();
+        },false);
 });

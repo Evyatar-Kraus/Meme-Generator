@@ -115,12 +115,12 @@
                         <button type="button" class="btn btn-default" aria-label="Left Align">
                             <span class="glyphicon glyphicon-font" aria-hidden="true"></span>
                         </button>
-                        <button type="button" class="btn btn-default" aria-label="Left Align">
+                        <!--<button type="button" class="btn btn-default" aria-label="Left Align">
                             <span class="glyphicon glyphicon-yen" aria-hidden="true"></span>
-                        </button>
-                        <button type="button" id="topColorText" class="btn btn-default" aria-label="Color Text">
-                            <span class="glyphicon glyphicon-tint" aria-hidden="true"></span>
-                        </button>
+                        </button>-->
+                        <a id="topColorText" class="btn btn-default" aria-label="Color Text"> 
+                                <input id='topColor' type="color">   
+                        </a>
                         <a id="topPlus" class="btn btn-default" aria-label="Plus">
                             <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
                         </a>
@@ -137,11 +137,7 @@
                             <span class="glyphicon glyphicon-align-right" aria-hidden="true"></span>
                         </button>
 
-                        <form name="colorForm"> 
-                            <p>Select Background Color 
-                                <input name="colorpicker" type="color" onchange="newBackgroundColor(colorpicker.value);"> 
-                            </p>    
-                        </form>
+
 
                         <div class="form-group">
                             <input type="text" class="form-control" id="myTextSecond" placeholder="Text">
@@ -152,11 +148,11 @@
                         <button type="button" class="btn btn-default" aria-label="Left Align">
                             <span class="glyphicon glyphicon-font" aria-hidden="true"></span>
                         </button>
-                        <button type="button" class="btn btn-default" aria-label="Left Align">
+                        <!--<a id="bottomStroke" class="btn btn-default" aria-label="Stroke">
                             <span class="glyphicon glyphicon-yen" aria-hidden="true"></span>
-                        </button>
+                        </a>-->
                         <a id="bottomColorText" class="btn btn-default" aria-label="Color Text"> 
-                                <input id='bottomColor' type="color" onchange="newColor(colorpicker.value);">   
+                                <input id='bottomColor' type="color">   
                         </a>
                         <a id="bottomPlus" class="btn btn-default" aria-label="Plus">
                             <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>

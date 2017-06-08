@@ -854,7 +854,7 @@ body {
   font-family: Lato; }
 
 .form-group {
-  width: 380px; }
+  width: 368px; }
   @media (max-width: 642px) {
     .form-group {
       width: 100%; } }
