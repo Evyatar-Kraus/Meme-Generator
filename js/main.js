@@ -28,7 +28,7 @@ function initCanvas(){
     return [canvas, context];
 }
 
-// window.onload = function(){
+
     window.addEventListener('load', function(){
     initCanvas();
     document.querySelector('#myTextFirst').addEventListener('keyup', function(event){

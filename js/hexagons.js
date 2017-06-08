@@ -12,44 +12,68 @@ var gImages = [
     { id: 8, url: "assets/img/troll-fixed.png", keywords: ['troll', 'face'] }
 ];
 
+var gState = { renderMode: 'hexagons' };
+
 var elSearchByKeyword = document.querySelector('.image-search');
 var elKeywords = document.querySelector('.keywords');
 var gSearchRenderTimeout;
 
 //rendering meme hexagons images when page loads or when returning from editor
-function renderMemeImages() {
-    var hexGrid = document.querySelector('#hexGrid');
-    hexGrid.innerHTML = '';
+function renderMemeImagesAsHexagons() {
+    gState.renderMode = 'hexagons';
+    var elImagesContainer = document.querySelector('.images-container');
+    var strHtml = '';
+    strHtml += '<ul id="hexGrid">';
     gImages.forEach(function (image, imageIndex) {
-        var strHtml = '';
-        strHtml += '<li class= "hex" onclick="openMemeEditor(' + imageIndex + ')"><div class="hexIn"><a class="hexLink" href="#"><img src="' + image.url + '" alt="" /><h1>Click The Meme</h1><p>To open the Meme Generator</p></a></div></li>';
-
-        hexGrid.innerHTML += strHtml;
-
+        strHtml += '<li class= "hex" onclick="openMemeEditor(' + imageIndex + ')"><div class="hexIn"><a class="hexLink" href="#"><img src="' + image.url + '" alt="" /><h1>Click</h1><p>To open Editor</p></a></div></li>';
     });
+    strHtml += '</ul>';
+    elImagesContainer.innerHTML = strHtml;
+}
+
+// rendering meme hexagons images when page loads or when returning from editor
+function renderMemeImagesAsList() {
+    gState.renderMode = 'list';
+    var elImagesContainer = document.querySelector('.images-container');
+    var strHtml = '<ul class="list-images">';
+    gImages.forEach(function (image, imageIndex) {
+        strHtml += '<li  class="list-image" onclick="openMemeEditor(' + imageIndex + ')"><img style="width:30;height:35px;" src="' + image.url + '" alt="" /><span>Click on the image to open the meme editor</span></li>';
+    });
+    strHtml += '</ul>';
+    elImagesContainer.innerHTML = strHtml;
 }
 
 //rendering meme hexagons images by keywords search
 function renderImagesByKeyword(searchValue) {
-    var hexGrid = document.querySelector('#hexGrid');
-    hexGrid.innerHTML = '';
+    var elImagesContainer = document.querySelector('.images-container');
+    var strHtml = '';
+    if (gState.renderMode === 'hexagons') {
+        strHtml += '<ul id="hexGrid">';
+    } else if (gState.renderMode === 'list') {
+        strHtml += '<ul class="list-images">';
+    }
     var imagesWithKeyword = gImages.filter(function (image) {
         return image.keywords.some(function (keyword) {
             return keyword === searchValue;
         });
     });
-    console.log(imagesWithKeyword);
+
     imagesWithKeyword.forEach(function (image, imageIndex) {
-        var strHtml = '';
 
-        strHtml += '<li class= "hex" onclick="openMemeEditor(' + imageIndex +
-            ')"><div class="hexIn"><a class="hexLink" href="#"><img src="' +
-            image.url + '" alt="" /><h1>Click The Meme</h1><p>To open the Meme Generator</p></a></div></li>';
-
-        hexGrid.innerHTML += strHtml;
+        if (gState.renderMode === 'hexagons') {
+            strHtml += '<li class= "hex" onclick="openMemeEditor(' + image.id +
+                ')"><div class="hexIn"><a class="hexLink" href="#"><img src="' +
+                image.url + '" alt="" /><h1>Click</h1><p>To open Editor</p></a></div></li>';
+        } else if (gState.renderMode === 'list') {
+            strHtml += '<li  class="list-image" onclick="openMemeEditor(' + image.id + ')"><img style="width:30;height:35px;" src="' + image.url + '" alt="" /><span>Click on the image to open the meme editor</span></li>';
+        }
     });
-    if (!hexGrid.innerHTML) {
-        hexGrid.innerHTML = '<h4>Sorry but no images were found</h4>';
+
+    if (imagesWithKeyword.length == 0) {
+        elImagesContainer.innerHTML = '<h4>Sorry but no images were found</h4>';
+    } else {
+        strHtml +='</ul>';
+        elImagesContainer.innerHTML = strHtml;
     }
 }
 
@@ -72,7 +96,7 @@ function searchImageByKeyWord() {
     console.log(searchValue);
     if (!searchValue) {
 
-        gSearchRenderTimeout = setTimeout(renderMemeImages, 1000);
+        gSearchRenderTimeout = setTimeout(renderMemeImagesAsHexagons, 1000);
     } else {
         gSearchRenderTimeout = setTimeout(renderImagesByKeyword, 1000, searchValue);
     }
@@ -81,7 +105,7 @@ function searchImageByKeyWord() {
 
 function keyWordClicked(keyword) {
     console.log(keyword);
-    var searchBox= document.querySelector('.image-search');
+    var searchBox = document.querySelector('.image-search');
     searchBox.value = keyword;
     searchImageByKeyWord();
 }
@@ -102,33 +126,33 @@ function renderKeywords() {
         });
     });
     for (var keyword in keywordByOccurence) {
-        
-        
+
+
         elKeywords.innerHTML += `<span onclick="keyWordClicked('${keyword}')"
-                           style="font-size: ${(10 + (20 * keywordByOccurence[keyword]))}px">${keyword}</span> `;
+                           style="font-size: ${(1 + (0.5 * keywordByOccurence[keyword]))}rem">${keyword}</span> `;
     }
-    
+
 }
 
 
-function saveFormToLocalStorage(e){
-     
-    if(!(localStorage.getItem('contactMessages'))){
-        localStorage.setItem('contactMessages',JSON.stringify([]));
+function saveFormToLocalStorage(e) {
+
+    if (!(localStorage.getItem('contactMessages'))) {
+        localStorage.setItem('contactMessages', JSON.stringify([]));
     }
-    
-    var message ={};
-    for(var i = 0; i < e.target.elements.length-1; i++){
+
+    var message = {};
+    for (var i = 0; i < e.target.elements.length - 1; i++) {
         var currFormControl = e.target.elements[i];
         message[currFormControl.name] = currFormControl.value;
     }
-    
+
     var savedMessages = JSON.parse(localStorage.getItem('contactMessages'));
-    
+
     savedMessages.push(message);
-    
-    localStorage.setItem('contactMessages',JSON.stringify(savedMessages));
-    e.preventDefault();  
+
+    localStorage.setItem('contactMessages', JSON.stringify(savedMessages));
+    e.preventDefault();
 }
 
 
@@ -156,7 +180,7 @@ function openMemeEditorForUrl(url) {
 
 
 window.onload = function () {
-    renderMemeImages();
+    renderMemeImagesAsHexagons();
     renderKeywords();
 };
 

@@ -1,0 +1,11 @@
+ul.list-images{
+    width:50%;
+    // display:flex;
+    // flex-flow:column nowrap;
+    // align-items:flex-end;
+    margin:0 auto;
+    list-style-type:none;
+    .list-image{
+        margin-bottom:20px;
+    }
+}
