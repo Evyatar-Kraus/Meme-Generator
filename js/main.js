@@ -151,13 +151,13 @@ window.addEventListener('load', function(){
         },false);
 
 
-//add stroke text
-        document.querySelector('#bottomStroke').addEventListener('change', function(event){
+// //add stroke text
+//         document.querySelector('#bottomStroke').addEventListener('change', function(event){
 
 
 
 
-            gState.txts.bottomColor = event.target.value;
-            renderCanvas();
-        },false);
+//             gState.txts.bottomColor = event.target.value;
+//             renderCanvas();
+//         },false);
 });

@@ -854,10 +854,13 @@ body {
   font-family: Lato; }
 
 .form-group {
-  width: 368px; }
+  width: 23em; }
   @media (max-width: 642px) {
     .form-group {
       width: 100%; } }
+
+#myTextSecond {
+  margin-top: 10px; }
 
 .keywords {
   max-width: 500px; }

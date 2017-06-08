@@ -29,8 +29,11 @@
     font-family: Lato;
 }
 .form-group{
-    width: 368px;
+    width: em(368px);
     @media (max-width: $mobile-breakpoint) {
     width: 100%;
   }
+}
+#myTextSecond{
+    margin-top: 10px;
 }
