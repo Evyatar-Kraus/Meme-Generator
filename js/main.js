@@ -63,6 +63,9 @@ function drawTexts(canvas, context) {
     });
 }
 
+
+   
+
 window.addEventListener('load', function(){
     renderCanvas();
     //click on some on hexagon-img that choose the img in array gImage by id
@@ -70,7 +73,9 @@ window.addEventListener('load', function(){
         gState.selectedImgId = ParseInt(event.target.id.split('img')[1]);
         renderCanvas();
     });
+    
 //first text from input to img
+
     document.querySelector('#myTextFirst').addEventListener('keyup', function(event){
         gState.txts.firstText = event.target.value;
         renderCanvas();
@@ -131,12 +136,14 @@ window.addEventListener('load', function(){
 //arhive text from img on top
     document.querySelector('#topArhive').addEventListener('click', function(event){
         gState.txts.firstText = '';
+        myTextFirst.value = '';
         renderCanvas();
     });
 //arhive text from  on button
         document.querySelector('#bottomArhive').addEventListener('click', function(event){
             gState.txts.secondText = '';
-        renderCanvas();
+            myTextSecond.value = '';
+            renderCanvas();
     });
 //add color to top text  
         document.querySelector('#topColor').addEventListener('change', function(event){
@@ -149,7 +156,7 @@ window.addEventListener('load', function(){
             renderCanvas();
         },false);
 
-//save this img with text to lacalstorage
+//save this img with text to my computer
     function downloadCanvas(link, canvasId, filename) {
     link.href = document.getElementById(canvasId).toDataURL();
     link.download = filename;
@@ -157,4 +164,8 @@ window.addEventListener('load', function(){
     document.querySelector('#btnSave').addEventListener('click', function(event){
         downloadCanvas(this, 'myCanvas', 'test.png');
     });
+//
+
+
+
 });
