@@ -29,10 +29,9 @@ function renderCanvas(){
     var context = canvas.getContext("2d");
 
     var imageObj = new Image();
-    context.clearRect ( 0 , 0 ,canvas.height , canvas.width );
+    // context.clearRect ( 0 , 0 ,canvas.height , canvas.width );
     imageObj.onload = function(){
         context.drawImage(imageObj, 0, 0);
-        // context.fillStyle = gState.txts.color;
         drawTexts(canvas, context);
     };
     imageObj.src = gImgs.filter(function(el){
@@ -150,14 +149,12 @@ window.addEventListener('load', function(){
             renderCanvas();
         },false);
 
-
-// //add stroke text
-//         document.querySelector('#bottomStroke').addEventListener('change', function(event){
-
-
-
-
-//             gState.txts.bottomColor = event.target.value;
-//             renderCanvas();
-//         },false);
+//save this img with text to lacalstorage
+    function downloadCanvas(link, canvasId, filename) {
+    link.href = document.getElementById(canvasId).toDataURL();
+    link.download = filename;
+    }
+    document.querySelector('#btnSave').addEventListener('click', function(event){
+        downloadCanvas(this, 'myCanvas', 'test.png');
+    });
 });
