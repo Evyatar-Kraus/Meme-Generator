@@ -1,5 +1,5 @@
 #myCanvas {
-    // margin: 50px;
+    margin: em(10px);
     border: 1px solid;
     @media (max-width: $mobile-breakpoint) {
         width: 85%;

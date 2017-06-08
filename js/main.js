@@ -63,9 +63,6 @@ function drawTexts(canvas, context) {
     });
 }
 
-
-   
-
 window.addEventListener('load', function(){
     renderCanvas();
     //click on some on hexagon-img that choose the img in array gImage by id
@@ -156,7 +153,7 @@ window.addEventListener('load', function(){
             renderCanvas();
         },false);
 
-//save this img with text to my computer
+//save this img with text on my computer
     function downloadCanvas(link, canvasId, filename) {
     link.href = document.getElementById(canvasId).toDataURL();
     link.download = filename;
@@ -164,8 +161,15 @@ window.addEventListener('load', function(){
     document.querySelector('#btnSave').addEventListener('click', function(event){
         downloadCanvas(this, 'myCanvas', 'test.png');
     });
-//
-
-
-
+//add 2 function...
 });
+
+function editorBackButtonClicked(){
+    myTextFirst.value = '';
+    myTextSecond.value = '';
+    gState.txts.firstText = '';
+    gState.txts.secondText = '';
+    document.querySelector('.app-canvas').classList.add('hidden');
+    document.querySelector('.meme-choice').classList.remove('hidden');
+
+}

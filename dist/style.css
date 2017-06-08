@@ -828,6 +828,7 @@ body {
     font-size: 13px; } }
 
 #myCanvas {
+  margin: 0.625em;
   border: 1px solid; }
   @media (max-width: 642px) {
     #myCanvas {
