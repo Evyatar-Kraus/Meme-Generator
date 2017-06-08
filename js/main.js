@@ -29,10 +29,9 @@ function renderCanvas(){
     var context = canvas.getContext("2d");
 
     var imageObj = new Image();
-    context.clearRect ( 0 , 0 ,canvas.height , canvas.width );
+    // context.clearRect ( 0 , 0 ,canvas.height , canvas.width );
     imageObj.onload = function(){
         context.drawImage(imageObj, 0, 0);
-        // context.fillStyle = gState.txts.color;
         drawTexts(canvas, context);
     };
     imageObj.src = gImgs.filter(function(el){
@@ -63,9 +62,6 @@ function drawTexts(canvas, context) {
         }
     });
 }
-
-
-   
 
 window.addEventListener('load', function(){
     renderCanvas();
@@ -137,12 +133,14 @@ window.addEventListener('load', function(){
 //arhive text from img on top
     document.querySelector('#topArhive').addEventListener('click', function(event){
         gState.txts.firstText = '';
+        myTextFirst.value = '';
         renderCanvas();
     });
 //arhive text from  on button
         document.querySelector('#bottomArhive').addEventListener('click', function(event){
             gState.txts.secondText = '';
-        renderCanvas();
+            myTextSecond.value = '';
+            renderCanvas();
     });
 //add color to top text  
         document.querySelector('#topColor').addEventListener('change', function(event){
@@ -155,14 +153,23 @@ window.addEventListener('load', function(){
             renderCanvas();
         },false);
 
-
-// //add stroke text
-//         document.querySelector('#bottomStroke').addEventListener('change', function(event){
-
-
-
-
-//             gState.txts.bottomColor = event.target.value;
-//             renderCanvas();
-//         },false);
+//save this img with text on my computer
+    function downloadCanvas(link, canvasId, filename) {
+    link.href = document.getElementById(canvasId).toDataURL();
+    link.download = filename;
+    }
+    document.querySelector('#btnSave').addEventListener('click', function(event){
+        downloadCanvas(this, 'myCanvas', 'test.png');
+    });
+//add 2 function...
 });
+
+function editorBackButtonClicked(){
+    myTextFirst.value = '';
+    myTextSecond.value = '';
+    gState.txts.firstText = '';
+    gState.txts.secondText = '';
+    document.querySelector('.app-canvas').classList.add('hidden');
+    document.querySelector('.meme-choice').classList.remove('hidden');
+
+}

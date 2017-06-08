@@ -1,5 +1,5 @@
 #myCanvas {
-    // margin: 50px;
+    margin: em(10px);
     border: 1px solid;
     @media (max-width: $mobile-breakpoint) {
         width: 85%;
@@ -27,6 +27,8 @@
 }
 .inputText{
     font-family: Lato;
+    text-transform: uppercase;
+    color: black;
 }
 .form-group{
     width: em(368px);
@@ -35,5 +37,8 @@
   }
 }
 #myTextSecond{
+    margin-top: 10px;
+}
+#btnSave{
     margin-top: 10px;
 }

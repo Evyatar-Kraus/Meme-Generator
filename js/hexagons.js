@@ -171,10 +171,12 @@ function openMemeEditor(imageIndex) {
 }
 
 
+
 function editorBackButtonClicked(){
     document.querySelector('.app-canvas').classList.add('hidden');
     document.querySelector('.meme-choice').classList.remove('hidden');
 }
+
 
 
 window.onload = function () {

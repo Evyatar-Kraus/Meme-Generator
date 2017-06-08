@@ -26,33 +26,34 @@
     <div class="meme-choice" />
     <section class="meme-generator">
         <a name="portfolio"></a>
-        <div class="generator-menu" style="">
+        <div class="generator-menu">
             <h1 style="display:inline-block; font-size:3em;line-height:30px;color:#323232">Meme Generator</h1>
             <div style="float:right;">
-                <button style="" onclick="renderMemeImagesAsHexagons()"><img src="assets/img/hexagon.svg" style="min-width:32px;"/></button>
-                <button style="" onclick="renderMemeImagesAsList()"><img src="assets/img/list.png" style="max-width:32px;" /></button>
+
+                <button onclick="renderMemeImagesAsHexagons()"><img src="assets/img/hexagon.svg" style="min-width:32px;"/></button>
+                <button onclick="renderMemeImagesAsList()"><img src="assets/img/list.png" style="max-width:32px;" /></button>
+
                 <input class="image-search" type="text" placeholder="search by keyword" oninput="searchImageByKeyWord()"></input>
             </div>
         </div>
 
-        <section class="images-section" style="">
-            <section class="images-container">
-                
 
+        <section class="images-section">
+            <section class="images-container" >
+              
             </section>
 
-            <div class="keywords-container" style="">
+            <div class="keywords-container">
                 <h1 style="color:#323232">Keywords :</h1>
                 <div class="keywords"></div>
             </div>
         </section>
+
         </div>
-        <div class="app-canvas hidden" style="">
+        <div class="app-canvas hidden">
             
             <div class="container-canvas flex align-center justify-center">
-              
                 <section class="post-container-canvas flex align-center justify-center">
-                    
                     <canvas id="myCanvas" width="400" height="458"></canvas>
 
                     <div class="post-text-canvas">
@@ -66,9 +67,9 @@
                         <a id="topArhive" class="btn btn-default" aria-label="Arhive">
                             <span class="glyphicon glyphicon-trash" aria-hidden="true"></span>
                         </a>
-                        <button type="button" class="btn btn-default" aria-label="Left Align">
+                        <!--<button type="button" class="btn btn-default" aria-label="Left Align">
                             <span class="glyphicon glyphicon-font" aria-hidden="true"></span>
-                        </button>
+                        </button>-->
                         <!--<button type="button" class="btn btn-default" aria-label="Left Align">
                             <span class="glyphicon glyphicon-yen" aria-hidden="true"></span>
                         </button>-->
@@ -99,9 +100,9 @@
                         <a id="bottomArhive" class="btn btn-default" aria-label="Arhive">
                             <span class="glyphicon glyphicon-trash" aria-hidden="true"></span>
                         </a>
-                        <button type="button" class="btn btn-default" aria-label="Left Align">
+                        <!--<button type="button" class="btn btn-default" aria-label="Left Align">
                             <span class="glyphicon glyphicon-font" aria-hidden="true"></span>
-                        </button>
+                        </button>-->
                         <!--<a id="bottomStroke" class="btn btn-default" aria-label="Stroke">
                             <span class="glyphicon glyphicon-yen" aria-hidden="true"></span>
                         </a>-->
@@ -124,9 +125,8 @@
                             <span class="glyphicon glyphicon-align-right" aria-hidden="true"></span>
                         </button>
                         <div>
-                            <button type="button" id="btnSave" class="btn btn-default">Save</button>
-                             <button style="float:right" onclick="editorBackButtonClicked()" type="button" class="btn btn-danger">Back</button>
-                            
+                        <a class="btn btn-default" href="#" role="button" id="btnSave">Save</a>
+                        <button style="float:right" id="btnSave" type="button" class="btn btn-danger" onclick="editorBackButtonClicked()">Back</button>
                         </div>
                     </div>
                 </section>

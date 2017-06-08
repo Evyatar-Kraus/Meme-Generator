@@ -827,6 +827,7 @@ body {
     font-size: 13px; } }
 
 #myCanvas {
+  margin: 0.625em;
   border: 1px solid; }
   @media (max-width: 642px) {
     #myCanvas {
@@ -851,7 +852,9 @@ body {
       flex: 1 1 100%; } }
 
 .inputText {
-  font-family: Lato; }
+  font-family: Lato;
+  text-transform: uppercase;
+  color: black; }
 
 .form-group {
   width: 23em; }
@@ -860,6 +863,9 @@ body {
       width: 100%; } }
 
 #myTextSecond {
+  margin-top: 10px; }
+
+#btnSave {
   margin-top: 10px; }
 
 ul.list-images {
