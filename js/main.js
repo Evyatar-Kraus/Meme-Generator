@@ -134,12 +134,20 @@ window.addEventListener('load', function(){
     document.querySelector('#topArhive').addEventListener('click', function(event){
         gState.txts.firstText = '';
         myTextFirst.value = '';
+        gState.txts.topColor = '#323232';
+        topColor.value = '#323232';
+        gState.txts.topSize = 30;
+        gState.txts.topAlign = 'center';
         renderCanvas();
     });
 //arhive text from  on button
         document.querySelector('#bottomArhive').addEventListener('click', function(event){
             gState.txts.secondText = '';
             myTextSecond.value = '';
+            gState.txts.bottomColor = '#323232';
+            bottomColor.value = '#323232';
+            gState.txts.bottomSize = 30;
+            gState.txts.bottomAlign = 'center';
             renderCanvas();
     });
 //add color to top text  
@@ -147,7 +155,7 @@ window.addEventListener('load', function(){
             gState.txts.topColor = event.target.value;
             renderCanvas();
         },false);
-//add color to bottom text  
+//add color to bottom text
         document.querySelector('#bottomColor').addEventListener('change', function(event){
             gState.txts.bottomColor = event.target.value;
             renderCanvas();
@@ -169,7 +177,15 @@ function editorBackButtonClicked(){
     myTextSecond.value = '';
     gState.txts.firstText = '';
     gState.txts.secondText = '';
+    gState.txts.topColor = '#323232';
+    topColor.value = '#323232';
+    gState.txts.bottomColor = '#323232';
+    bottomColor.value = '#323232';
+    gState.txts.topSize = 30;
+    gState.txts.bottomSize = 30;
+    gState.txts.topAlign = 'center';
+    gState.txts.bottomAlign = 'center';
     document.querySelector('.app-canvas').classList.add('hidden');
     document.querySelector('.meme-choice').classList.remove('hidden');
-
+    renderCanvas();
 }
