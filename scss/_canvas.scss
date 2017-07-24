@@ -1,44 +1,63 @@
-#myCanvas {
-    margin: em(10px);
-    border: 1px solid;
-    @media (max-width: $mobile-breakpoint) {
-        width: 85%;
-        padding: em(10px) em(10px);
-  }
+    #myCanvas {
+        display:flex;
+        flex-flow:column wrap;
+        border: 1px solid;
+        // @media (max-width: $mobile-breakpoint) {
+            max-width: 45%;
+            // padding: em(10px) em(10px);
+    // }
+    }
+
+.post-text-canvas{
+    font-size:1.0rem;
+    color:red;
+    
+}
+.btn{
+    display:inline-block;
+    
+}
+.btn-row{
+    display:flex;
+    flex-flow:row wrap;
 }
 
-.post-img-canvas{
-  @media (max-width: $mobile-breakpoint) {
-    width: 85%;
-    padding: em(10px) em(10px);
-  }
-}
-.post-text-canvas {
-    margin: em(100px);
-    position: relative;
-    flex: 0 1 calc(50% - 2em);
-    margin-right: em(220px);
-    color: #d7fcf5;
-    font-family: Lato;
-    font-weight: 400;
-    @media (max-width: $mobile-breakpoint) {
-        flex: 1 1 100%;
-    }
-}
-.inputText{
-    font-family: Lato;
-    text-transform: uppercase;
-    color: black;
-}
 .form-group{
-    width: em(368px);
-    @media (max-width: $mobile-breakpoint) {
-    width: 100%;
-  }
+    max-width:200px;
 }
-#myTextSecond{
-    margin-top: 10px;
-}
-#btnSave{
-    margin-top: 10px;
-}
+
+    // .post-img-canvas{
+    // // @media (max-width: $mobile-breakpoint) {
+    // //     width: 85%;
+    // //     padding: em(10px) em(10px);
+    // // }
+    // }
+    // .post-text-canvas {
+    //     margin: em(100px);
+    //     position: relative;
+    //     flex: 0 1 calc(50% - 2em);
+    //     margin-right: em(220px);
+    //     color: #d7fcf5;
+    //     font-family: Lato;
+    //     font-weight: 400;
+    //     // @media (max-width: $mobile-breakpoint) {
+    //     //     display:block;
+    //     // }
+    // }
+    // .inputText{
+    //     font-family: Lato;
+    //     text-transform: uppercase;
+    //     color: black;
+    // }
+    // .form-group{
+    //     width: em(368px);
+    // //     @media (max-width: $mobile-breakpoint) {
+    // //     width: 100%;
+    // // }
+    // }
+    // #myTextSecond{
+    //     margin-top: 10px;
+    // }
+    // #btnSave{
+    //     margin-top: 10px;
+    // }

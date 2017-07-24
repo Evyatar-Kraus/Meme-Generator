@@ -1,20 +1,39 @@
 
 .main-nav{
-max-width: 100%;
-color: white;
+min-width: 100%;
+    ul{
+        li{
+        max-height:30px;
+
+        }
+       
+    }
+    a{  
+    
+    color: white;
+    padding-right:1rem;
+    padding-left:0.5rem;
+    }
  font-family: Lato;
- font-size:0.4rem;
+
 background-color: #323232;
-    li.active{
-        color:#44ee99;
-    }
-    li{
-        padding-top:0.3rem;
-        margin-right:0.5rem;
-    }
+    font-size:1.3rem;
 }
 
+a:visited { text-decoration: none; }
+a:hover { text-decoration: none; }
+a:focus { text-decoration: none;  }
+a:hover, a:active { text-decoration: none;  }
 
+
+.logo-img{
+    width:4rem;
+    height:5rem;
+    top:0.8rem;
+    position:relative;
+    
+
+}
 
 // .main-nav {
 //     max-width: 100%;

@@ -436,6 +436,7 @@ template {
   --container-width: 1020px;
   --inner-container-width: 900px;
   /* Fonts */
+  --font-size: 10px;
   --primary-font: Lato;
   --secondary-font: Ubuntu;
   /* Colors */
@@ -494,7 +495,8 @@ html {
 
 html {
   color: var(--main-color);
-  font-family: var(--primary-font); }
+  font-family: var(--primary-font);
+  font-size: var(--font-size); }
 
 a {
   color: currentColor;
@@ -508,27 +510,34 @@ fieldset {
 
 /* Components */
 .main-nav {
-  max-width: 100%;
-  color: white;
+  min-width: 100%;
   font-family: Lato;
-  font-size: 1.4rem;
-  background-color: #323232; }
-  .main-nav li.active {
-    color: #44ee99; }
-  .main-nav li {
-    padding-top: 0.8rem;
-    margin-right: 2rem; }
+  background-color: #323232;
+  font-size: 1.3rem; }
+  .main-nav ul li {
+    max-height: 30px; }
+  .main-nav a {
+    color: white;
+    padding-right: 1rem;
+    padding-left: 0.5rem; }
 
-.container {
-  padding: 5.0625em 0;
-  position: relative;
-  width: 100%;
-  max-width: 61.25em; }
+a:visited {
+  text-decoration: none; }
 
-.post-container {
-  margin: 5.625em;
-  display: flex;
-  flex-flow: row wrap; }
+a:hover {
+  text-decoration: none; }
+
+a:focus {
+  text-decoration: none; }
+
+a:hover, a:active {
+  text-decoration: none; }
+
+.logo-img {
+  width: 4rem;
+  height: 5rem;
+  top: 0.8rem;
+  position: relative; }
 
 .contact-container {
   font-size: 1.3rem;
@@ -545,8 +554,7 @@ fieldset {
     justify-content: center;
     align-items: flex-start;
     margin: 0 auto;
-    padding-left: 20px;
-    padding-right: 20px; }
+    padding: 3% 3%; }
     .contact-container .contact .contact-heading > p {
       color: #bfbfbf; }
     .contact-container .contact .contact-body {
@@ -583,7 +591,7 @@ fieldset {
         .contact-container .contact .contact-form textarea::-webkit-input-placeholder {
           color: #afafaf; }
     .contact-container .contact .contact-details {
-      flex-basis: 35%;
+      flex-basis: 49%;
       display: flex;
       flex-flow: column nowrap;
       justify-content: flex-start;
@@ -591,8 +599,9 @@ fieldset {
       font-family: var(--primary-font); }
       .contact-container .contact .contact-details p {
         padding: 0;
+        font-size: 1.3rem;
         line-height: 2.3rem;
-        margin-bottom: 0.1rem;
+        margin-bottom: 0.3rem;
         min-height: 50%;
         color: #bfbfbf; }
       .contact-container .contact .contact-details .emphasis {
@@ -615,8 +624,10 @@ fieldset {
     resize: none; }
 
 .main-footer {
-  background-color: black;
-  padding: 4rem; }
+  padding-top: 1rem;
+  padding-bottom: 0.2rem;
+  font-size: 1rem !important;
+  background-color: black; }
 
 .about {
   border-top: 2px solid lightgray;
@@ -827,75 +838,21 @@ body {
     font-size: 13px; } }
 
 #myCanvas {
-  margin: 0.625em;
-  border: 1px solid; }
-  @media (max-width: 642px) {
-    #myCanvas {
-      width: 85%;
-      padding: 0.625em 0.625em; } }
-
-@media (max-width: 642px) {
-  .post-img-canvas {
-    width: 85%;
-    padding: 0.625em 0.625em; } }
+  display: flex;
+  flex-flow: column wrap;
+  border: 1px solid;
+  max-width: 45%; }
 
 .post-text-canvas {
-  margin: 6.25em;
-  position: relative;
-  flex: 0 1 calc(50% - 2em);
-  margin-right: 13.75em;
-  color: #d7fcf5;
-  font-family: Lato;
-  font-weight: 400; }
-  @media (max-width: 642px) {
-    .post-text-canvas {
-      flex: 1 1 100%; } }
+  font-size: 1.0rem;
+  color: red; }
 
-.inputText {
-  font-family: Lato;
-  text-transform: uppercase;
-  color: black; }
+.btn {
+  display: inline-block; }
+
+.btn-row {
+  display: flex;
+  flex-flow: row wrap; }
 
 .form-group {
-  width: 23em; }
-  @media (max-width: 642px) {
-    .form-group {
-      width: 100%; } }
-
-#myTextSecond {
-  margin-top: 10px; }
-
-#btnSave {
-  margin-top: 10px; }
-
-ul.list-images {
-  list-style-type: none; }
-  ul.list-images .list-image {
-    margin-bottom: 20px; }
-
-.meme-generator {
-  min-height: 490px;
-  margin: 0 auto; }
-
-.image-search {
-  padding: 8px;
-  margin-right: 4rem; }
-
-.images-section {
-  display: flex;
-  margin: 0;
-  padding: 0;
-  min-width: 260px; }
-  .images-section .images-container {
-    flex: 0 0 65%; }
-  .images-section .keywords-container {
-    flex: 1;
-    min-width: 60px;
-    border: 2px solid black;
-    padding: 20px; }
-    .images-section .keywords-container .keywords {
-      display: inline-block;
-      margin: 0; }
-  .images-section:after {
-    content: "";
-    clear: both; }
+  max-width: 200px; }
