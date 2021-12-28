@@ -10,4 +10,4 @@ run with
 npm start
 ```
 
-Or in this link: [Meme Generator](https://evyatar-kraus.github.io/meme-generator/).
+Or in this link: [Meme Generator](https://evyatar-kraus.github.io/Meme-Generator/).
