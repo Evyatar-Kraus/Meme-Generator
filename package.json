@@ -9,20 +9,19 @@
     "styles": "node-sass scss/style.scss -o dist --watch",
     "build": "rm -rf build && copyfiles assets/* index.html assets/fonts/**/* dist/* build"
   },
-  "devDependencies": {
-    "copyfiles": "^1.0.0",
-    "node-sass": "^3.13.0",
-    "npm-run-all": "^3.1.1"
-  },
+  "devDependencies": {},
   "dependencies": {
-    "bootstrap": "^3.3.7",
-    "jquery": "^3.2.1",
-    "normalize.css": "^5.0.0"
+    "bootstrap": "^3.4.1",
+    "copyfiles": "^2.4.1",
+    "jquery": "^3.6.0",
+    "node-sass": "^7.0.1",
+    "normalize.css": "^5.0.0",
+    "npm-run-all": "^4.1.5"
   },
-  "description": "meme generator for second sprint  ",
+  "description": "meme generator for second sprint",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Lariska/second-sprint.git"
+    "url": "git+https://github.com/Evyatar-Kraus/meme-generator.git"
   },
   "keywords": [
     "meme",
@@ -31,7 +30,7 @@
   ],
   "author": "evyatar kraus",
   "bugs": {
-    "url": "https://github.com/Lariska/second-sprint/issues"
+    "url": "https://github.com/Evyatar-Kraus/meme-generator/issues"
   },
-  "homepage": "https://github.com/Lariska/second-sprint#readme"
+  "homepage": "https://github.com/Evyatar-Kraus/meme-generator#readme"
 }
