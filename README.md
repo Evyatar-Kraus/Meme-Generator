@@ -1,9 +1,13 @@
 # meme-generator
 
-a demo of a meme generator
+### Hexagon memes generator
 
-run with 
+Choose your meme's image and add your texts.
+Afterwards, save the meme to your computer.
 
+run with
+```
 npm start
+```
 
-in the cmd
+Or in this link: [Meme Generator](https://evyatar-kraus.github.io/meme-generator/).
